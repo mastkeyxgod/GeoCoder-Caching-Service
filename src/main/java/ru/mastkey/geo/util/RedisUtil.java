@@ -6,7 +6,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.exceptions.JedisConnectionException;
 
 @Component
-public class RedisUtil implements CacheBDConnector{
+public class RedisUtil implements CacheDBConnector {
     public static final long THIRTY_DAYS_IN_SECONDS = 2592000;
 
     private final Jedis jedis;

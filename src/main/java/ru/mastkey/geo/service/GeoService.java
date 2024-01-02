@@ -6,7 +6,7 @@ import ru.mastkey.geo.dto.AddressRequest;
 import ru.mastkey.geo.dto.AddressResponse;
 import ru.mastkey.geo.dto.CoordinatesRequest;
 import ru.mastkey.geo.dto.CoordinatesResponse;
-import ru.mastkey.geo.util.CacheBDConnector;
+import ru.mastkey.geo.util.CacheDBConnector;
 import ru.mastkey.geo.util.GeoAPIConnector;
 
 @Service
@@ -14,10 +14,10 @@ public class GeoService {
 
     private final GeoAPIConnector geoAPIConnector;
 
-    private final CacheBDConnector cacheBDConnector;
+    private final CacheDBConnector cacheBDConnector;
 
     @Autowired
-    public GeoService(GeoAPIConnector geoAPIConnector, CacheBDConnector cacheBDConnector) {
+    public GeoService(GeoAPIConnector geoAPIConnector, CacheDBConnector cacheBDConnector) {
         this.geoAPIConnector = geoAPIConnector;
         this.cacheBDConnector = cacheBDConnector;
     }
